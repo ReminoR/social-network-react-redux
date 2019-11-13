@@ -1,0 +1,23 @@
+.nav {
+    grid-area: n;
+    background: lightgreen;
+    width: 150px;
+    padding: 20px;
+}
+.item {
+    color: #fff;
+}
+
+.item a.activeLink {
+    color: gold;
+}
+.item a {
+    color: #fff;
+    text-decoration: none;
+}
+.item a:active {
+    color: #fff;
+}
+.item a:hover {
+    color: blueviolet;
+}
