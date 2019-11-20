@@ -21,3 +21,21 @@
 .item a:hover {
     color: blueviolet;
 }
+
+.friends {
+    margin: 30px 0 0 0;
+}
+
+.friends_item {
+    display: inline-block;
+    font-size: 10px;
+    margin: 0 5px 0 0px;
+    width: 45px;
+    text-align: center;
+}
+
+.friends_item img {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+}

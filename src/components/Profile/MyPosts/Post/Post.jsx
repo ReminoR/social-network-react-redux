@@ -6,7 +6,7 @@ const Post = (props) => {
 
 	return (
         <div className={s.item}>
-            <img src="https://resizing.flixster.com/hMGL-rLPoWfSb7asA6OkCoNKQEU=/206x305/v1.bTsxMTE3Njc5MjtqOzE4MjY0OzEyMDA7ODAwOzEyMDA" alt=""/>
+            <img src='https://c7.alamy.com/comp/J79NCA/avatar-man-with-beard-icon-cartoon-style-J79NCA.jpg' alt=""/>
             {props.message}
             <div>
                 <span>Like {props.likescount}</span>

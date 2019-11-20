@@ -9,27 +9,29 @@ import {BrowserRouter, Route} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import {updateNewPostText} from "./redux/state";
 
 
 
 
 
 const App = (props) => {
-
   return (
-    <BrowserRouter>
       <div className='app-wrapper'>
         <Header/>
         <Navbar/>
         <div className='app-wrapper-content'>
-          <Route exact path='/profile' render={ () => <Profile state={props.state.profilePage}/>} />
+          <Route exact path='/profile' render={ () => <Profile
+              profilePage={props.state.profilePage}
+              addPost={props.addPost}
+              updateNewPostText={props.updateNewPostText}/>}/>
           <Route exact path='/dialogs' render={ () => <Dialogs state={props.state.dialogsPage} />} />
           <Route exact path='/news' component={News}/>
           <Route exact path='/music' component={Music}/>
           <Route exact path='/settings' component={Settings}/>
         </div>
       </div>
-    </BrowserRouter>);
+  );
 }
 
 export default App;
