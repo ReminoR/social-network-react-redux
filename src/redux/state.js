@@ -1,4 +1,10 @@
-import {rerenderEntireTree} from "../render";
+import ReactDOM from "react-dom";
+import {BrowserRouter} from "react-router-dom";
+import App from "../index";
+
+let rerenderEntireTree = (state) => {
+    console.log('State was changed');
+}
 
 let state = {
     profilePage: {
@@ -38,7 +44,7 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -50,10 +56,16 @@ export let addPost = () => {
     rerenderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     rerenderEntireTree(state);
 
 }
 
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer; //observer - паттерн
+}
+
 export default state;
+
+// store - OOP
